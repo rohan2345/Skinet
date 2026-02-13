@@ -1,27 +1,25 @@
-
-using System.Formats.Asn1;
-using System.Reflection.Metadata.Ecma335;
+using API.RequestHelpers;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specification;
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
-[ApiController]
-[Route("api/[controller]")]
-public class ProductsController(IGenericRepository<Product> repo) : ControllerBase
+
+public class ProductsController(IGenericRepository<Product> repo) : BaseAPIController
 {
    
 
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(string? brand, string? type,string? sort)
+    public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery]ProductSpecParams specParams)
     {
        // return Ok(await repo.GetProductsAsync(brand,type,sort));using non-Genric Repository
-          var spec= new ProductSpecification(brand,type,sort);
-          var products= await repo.ListAsync(spec);
-          return Ok(products);//using specification
+          var spec= new ProductSpecification(specParams);
+          //var products= await repo.ListAsync(spec); shiftet BASEAPI COntroller
+         // var count=await repo.CountAsync(spec); shiftet BASEAPI COntroller
+          //var pagination=new Pagination<Product>(specParams.PageIndex,specParams.PageSize,count,products);shiftet BASEAPI COntroller
+
+          return await CreatePagedResult(repo,spec,specParams.PageIndex,specParams.PageSize);
           // return Ok(await repo.ListAllAsync()); //using Genric Repository
     }
 
