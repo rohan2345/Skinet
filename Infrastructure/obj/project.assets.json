@@ -4109,8 +4109,8 @@
     },
     "Core/1.0.0": {
       "type": "project",
-      "path": "../Core/Core.csproj",
-      "msbuildProject": "../Core/Core.csproj"
+      "path": "../COre/Core.csproj",
+      "msbuildProject": "../COre/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4153,8 +4153,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Public\\skinet\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Public\\skinet\\Core\\Core.csproj"
+            "C:\\Users\\Public\\skinet\\COre\\Core.csproj": {
+              "projectPath": "C:\\Users\\Public\\skinet\\COre\\Core.csproj"
             }
           }
         }
