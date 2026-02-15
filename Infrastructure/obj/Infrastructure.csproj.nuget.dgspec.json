@@ -4,14 +4,14 @@
     "C:\\Users\\Public\\skinet\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Public\\skinet\\COre\\Core.csproj": {
+    "C:\\Users\\Public\\skinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Public\\skinet\\COre\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Public\\skinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Public\\skinet\\COre\\Core.csproj",
+        "projectPath": "C:\\Users\\Public\\skinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\hp laptop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Public\\skinet\\COre\\obj\\",
+        "outputPath": "C:\\Users\\Public\\skinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Public\\skinet\\COre\\Core.csproj": {
-                "projectPath": "C:\\Users\\Public\\skinet\\COre\\Core.csproj"
+              "C:\\Users\\Public\\skinet\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Public\\skinet\\Core\\Core.csproj"
               }
             }
           }
