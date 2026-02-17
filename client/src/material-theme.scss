@@ -10,6 +10,10 @@
     background-color: blue,
   ));
 }
+.s{
+  height: var(--mat-form-field-container-height)!important;
+}
+
 
 html {
   height: 100%;
