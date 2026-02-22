@@ -1,10 +1,13 @@
 services:
-  sql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA-PASSWORD: "SHDSJ"
+  redis:
+    image: redis:latest
     ports:
-     -"1433:1433"
+         - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+   redis-data:
+
 
       
