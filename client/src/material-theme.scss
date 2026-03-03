@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@include mat.core();
 
 // Customize the entire app. Change :root to your selector if you want to scope the styles.
 :root {
@@ -36,15 +37,20 @@
 
 html {
   height: 100%;
+
   @include mat.theme((
     color: (
+      theme-type: light,   // important
       primary: mat.$azure-palette,
+      secondary: mat.$blue-palette,
       tertiary: mat.$blue-palette,
+      error: mat.$red-palette,
     ),
     typography: Roboto,
     density: 0,
   ));
 }
+
 
 body {
   // Default the application to a light color theme. This can be changed to
